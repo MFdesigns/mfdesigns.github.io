@@ -8,13 +8,21 @@
 <body>
     <p class="output">X</p>
     <img src="arrow.png" class="arrow"/>
+    <button class="start" onclick="start();">Start</button>
     <script>
         const arrow = document.querySelector(".arrow");
         arrow.style.transform = "rotate(90deg)";
 
-        window.addEventListener("deviceorientation", (event) => {
-            output.textContent = event.alpha;
-        });
+        function start() {
+            console.log("start");
+            DeviceOrientationEvent.requestPermission().then(res => {
+                if (response == 'granted') {
+                    window.addEventListener('deviceorientation', (e) => {
+                        output.textContent = event.alpha;
+                    })
+                }
+            })
+        }
     </script>
 </body>
 </html>
