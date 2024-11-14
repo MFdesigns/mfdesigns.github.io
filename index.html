@@ -20,7 +20,7 @@
                 if (response == 'granted') {
                     window.addEventListener('deviceorientation', (event) => {
                         output.textContent = event.alpha;
-                        arrow.style.transform = `rotate(${event.alpha - 240}deg)`;
+                        arrow.style.transform = `rotate(${parseInt(event.alpha)}deg)`;
                     })
                 }
             })
