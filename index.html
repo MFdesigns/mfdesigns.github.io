@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow App</title>
+</head>
+<body>
+    <p class="output">X</p>
+    <img src="arrow.png" class="arrow"/>
+    <script>
+        const arrow = document.querySelector(".arrow");
+        arrow.style.transform = "rotate(90deg)";
+
+        window.addEventListener("deviceorientation", (event) => {
+            output.textContent = event.alpha;
+        });
+    </script>
+</body>
+</html>
