@@ -17,7 +17,7 @@
             console.log("start");
             DeviceOrientationEvent.requestPermission().then(res => {
                 if (response == 'granted') {
-                    window.addEventListener('deviceorientation', (e) => {
+                    window.addEventListener('deviceorientation', (event) => {
                         output.textContent = event.alpha;
                     })
                 }
