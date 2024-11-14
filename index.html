@@ -13,8 +13,10 @@
         const arrow = document.querySelector(".arrow");
         arrow.style.transform = "rotate(90deg)";
 
+        const output = document.querySelector(".output");
+
         function start() {
-            console.log("start");
+            output.textContent = "start";
             DeviceOrientationEvent.requestPermission().then(response => {
                 if (response == 'granted') {
                     window.addEventListener('deviceorientation', (event) => {
