@@ -11,7 +11,6 @@
     <button class="start" onclick="start();">Start</button>
     <script>
         const arrow = document.querySelector(".arrow");
-        arrow.style.transform = "rotate(90deg)";
 
         const output = document.querySelector(".output");
 
@@ -21,6 +20,7 @@
                 if (response == 'granted') {
                     window.addEventListener('deviceorientation', (event) => {
                         output.textContent = event.alpha;
+                        arrow.style.transform = `rotate(${event.alpha - 240}deg)`;
                     })
                 }
             })
